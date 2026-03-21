@@ -57,7 +57,7 @@ RUN pip install --no-cache-dir \
     psutil
 
 # Install PyTorch Geometric extensions (assuming CUDA will be available at runtime)
-RUN pip install --no-cache-dir \
+RUN pip install --no-cache-dir --no-index \
     pyg-lib torch-scatter torch-sparse torch_cluster torch_spline_conv \
     -f https://data.pyg.org/whl/torch-2.7.0+cu126.html && \
     echo "PyTorch Geometric extensions installed successfully" && \
